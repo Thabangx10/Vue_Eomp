@@ -6,6 +6,7 @@ export default createStore({
   state: {
     projects : null,
     education : null,
+    // skills : null,
     testimonials : null,
   },
   getters: {
@@ -17,6 +18,11 @@ export default createStore({
     setEducation(state, education){
       state.education = education
     },
+
+    // setSkills(state, skills){
+    //   state.skills = skills
+    // },
+
     setTestimonials(state, testimonials){
       state.testimonials = testimonials
     }
@@ -42,6 +48,19 @@ export default createStore({
 
       context.commit('setEducation', education)
     },
+
+    // async fetchSkills(context) {
+    //   try {
+    //     // Make an API call to fetch skills data
+    //     let response = await fetch(DataUrl);
+    //     let {skills} = await response.json();
+
+    //     // Dispatch the fetched skills data to the store
+    //     context.commit('setSkills', skills);
+    //   } catch (error) {
+    //     console.error(error);
+    //   }
+    // },
 
     async fetchTestimonials (context) {
       let response = await fetch(DataUrl);

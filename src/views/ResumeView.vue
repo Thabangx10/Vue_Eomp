@@ -1,12 +1,63 @@
 <template>
-  <div container-fluid></div>
+  <div class="container-fluid">
+    <section id="education">
+      <div class="education">
+        <div v-for="item in resume" :key="item.id" class="card">
+          <h4 class="display-4">{{ item.year }}</h4>
+          <div class="card-body">
+            <p class="text-white">
+              {{ item.description }} @ <span>{{ item.place }}</span>
+              <a
+                v-if="item.certificate !== 'In progress'"
+                :href="item.certificate"
+                target="_blank"
+                >{{ item.type }}</a
+              >
+              <span v-else>{{ item.type }}</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- Skills section -->
 </template>
+  
+  <script>
+export default {
+  computed: {
+    resume() {
+      return this.$store.state.education;
+    },
+  },
+  mounted() {
+    this.$store.dispatch("fetchEducation");
 
-<script>
-export default {};
+  },
+};
 </script>
+  
+  <style>
+/* Body */
+body {
+  text-align: center;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  color: black;
+}
 
-<style>
+:root {
+  --primary: black;
+  --secondary: rgb(87, 26, 26);
+  --alternative: rgb(125, 116, 116);
+  --awesomeColor: black;
+  --green: black;
+  --mainBox-shadow: -8px -3px 23px 5px rgba(105, 96, 96, 0.75);
+}
+
+
 /* Skills */
 
 .progress-title {
@@ -25,12 +76,6 @@ export default {};
   overflow: visible;
 }
 
-.progress .progress-bar {
-  position: relative;
-  -webkit-animation: animate-positive 2s;
-  animation: animate-positive 2s;
-}
-
 .list-unstyled {
   margin-right: 40px;
 }
@@ -40,6 +85,7 @@ export default {};
   width: 40em;
   margin: 5px auto;
   padding: 10px;
+  color: black;
 }
 .card {
   border: 4px solid var(--green);
@@ -48,6 +94,7 @@ export default {};
   padding: 10px;
   width: 50%;
   background-color: var(--alternative);
+  color: black;
 }
 .card:nth-child(odd) {
   position: relative;
@@ -80,7 +127,7 @@ export default {};
 }
 
 /* Media query */
-@media screen and (width < 900px) {
+@media screen and (max-width: 900px) {
   /* Education */
   .education {
     width: 100%;
@@ -112,3 +159,4 @@ export default {};
   }
 }
 </style>
+  

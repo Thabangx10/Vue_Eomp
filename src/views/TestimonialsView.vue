@@ -3,30 +3,30 @@
   <h2 class="display-2">Testimonials</h2>
   <section class="container" id="testimonial">
     <div class="row">
-    </div>
-    <div
-      class="col-lg-4"
-      v-for="testimonial in testimonials"
-      :key="testimonial.id"
-    >
-      <div class="row">
-        <div class="testimonials">
-          <div
-            class="container d-flex align-items-center justify-content-center flex-wrap"
-          >
-            <div class="box">
-              <div class="body">
-                <div class="imgContainer">
-                  <img :src="testimonial.image" alt="" />
-                </div>
-                <div
-                  class="content d-flex flex-column align-items-center justify-content-center"
-                >
-                  <div>
-                    <h3 class="text-white fs-5">{{ testimonial.name }}</h3>
-                    <p class="fs-6 text-white testimonial-content">
-                      {{ testimonial.feedback }}
-                    </p>
+      <div
+        class="col-lg-4"
+        v-for="testimonial in testimonials"
+        :key="testimonial.id"
+      >
+        <div class="row">
+          <div class="testimonials">
+            <div
+              class="container d-flex align-items-center justify-content-center flex-wrap"
+            >
+              <div class="box">
+                <div class="body">
+                  <div class="imgContainer">
+                    <img :src="testimonial.image" alt="" />
+                  </div>
+                  <div
+                    class="content d-flex flex-column align-items-center justify-content-center"
+                  >
+                    <div>
+                      <h3 class="text-white fs-5">{{ testimonial.name }}</h3>
+                      <p class="fs-6 text-white testimonial-content">
+                        {{ testimonial.feedback }}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
