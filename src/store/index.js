@@ -23,7 +23,7 @@ export default createStore({
   },
   actions: {
     // Fetching our data that is being stored in our 'DataUrl' container
-    async fecthProjects(context){
+    async fetchProjects(context){
       // Creating a container to return data 
       let response = await fetch(DataUrl);
 
