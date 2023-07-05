@@ -7,6 +7,25 @@ export default {};
 </script>
 
 <style>
+/* Body */
+body {
+  text-align: center;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  color: black;
+}
+
+:root {
+  --primary: black;
+  --secondary: rgb(87, 26, 26);
+  --alternative: rgb(125, 116, 116);
+  --awesomeColor: black;
+  --green: black;
+  --mainBox-shadow: -8px -3px 23px 5px rgba(105, 96, 96, 0.75);
+}
+
 /* Skills */
 
 .progress-title {
@@ -25,12 +44,6 @@ export default {};
   overflow: visible;
 }
 
-.progress .progress-bar {
-  position: relative;
-  -webkit-animation: animate-positive 2s;
-  animation: animate-positive 2s;
-}
-
 .list-unstyled {
   margin-right: 40px;
 }
@@ -40,6 +53,7 @@ export default {};
   width: 40em;
   margin: 5px auto;
   padding: 10px;
+  color: black;
 }
 .card {
   border: 4px solid var(--green);
@@ -48,6 +62,7 @@ export default {};
   padding: 10px;
   width: 50%;
   background-color: var(--alternative);
+  color: black;
 }
 .card:nth-child(odd) {
   position: relative;
@@ -80,7 +95,7 @@ export default {};
 }
 
 /* Media query */
-@media screen and (width < 900px) {
+@media screen and (max-width: 900px) {
   /* Education */
   .education {
     width: 100%;
