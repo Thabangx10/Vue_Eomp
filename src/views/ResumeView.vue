@@ -21,6 +21,7 @@
     </section>
   </div>
   <!-- Skills section -->
+
 </template>
   
   <script>
@@ -29,6 +30,9 @@ export default {
     resume() {
       return this.$store.state.education;
     },
+    // skill() {
+      // return this.$store.state.skill}
+    // }
   },
   mounted() {
     this.$store.dispatch("fetchEducation");
