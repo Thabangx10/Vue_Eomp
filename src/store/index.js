@@ -6,8 +6,10 @@ export default createStore({
   state: {
     projects : null,
     education : null,
-    // skills : null,
+    workplace : null,
     testimonials : null,
+    frontEnd : null,
+    backEnd : null
   },
   getters: {
   },
@@ -15,13 +17,23 @@ export default createStore({
     setProjects(state, projects){
       state.projects = projects
     },
+
+    // Resume breakdown
     setEducation(state, education){
       state.education = education
     },
 
-    // setSkills(state, skills){
-    //   state.skills = skills
-    // },
+    setWorkplace(state, workplace){
+      state.workplace = workplace
+    },
+
+    setFrontEnd(state, frontEnd){
+      state.frontEnd = frontEnd
+    },
+
+    setBackEnd(state, backEnd){
+      state.backEnd = backEnd
+    },
 
     setTestimonials(state, testimonials){
       state.testimonials = testimonials
@@ -42,11 +54,34 @@ export default createStore({
       context.commit('setProjects', projects)
     },
 
+    // Resume BreakDown Functions
+
     async fetchEducation(context){
       let response = await fetch(DataUrl);
       let {education} = await response.json()
 
       context.commit('setEducation', education)
+    },
+
+    async fetchWorkplace(context){
+      let response = await fetch(DataUrl);
+      let {workplace} = await response.json()
+
+      context.commit('setWorkplace', workplace)
+    },
+
+    async fetchFrontEnd(context){
+      let response = await fetch(DataUrl);
+      let {frontEnd} = await response.json()
+
+      context.commit('setFrontEnd', frontEnd)
+    },
+
+    async fetchBackEnd(context){
+      let response = await fetch(DataUrl);
+      let {backEnd} = await response.json()
+
+      context.commit('setBackEnd', backEnd)
     },
 
     // async fetchSkills(context) {

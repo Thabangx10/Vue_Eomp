@@ -1,4 +1,5 @@
 <template>
+  <br><br><br>
   <div class="container-fluid">
     <section id="education">
       <div class="education">
@@ -20,8 +21,83 @@
       </div>
     </section>
   </div>
-  <!-- Skills section -->
+  <br /><br />
 
+  <!-- WORKPLACE section-->
+  <div class="container-fluid">
+    <section id="workplace">
+      <div class="workplace">
+        <div v-for="item in workplace" :key="item.id" class="card">
+          <h4 class="display-4">{{ item.name }}</h4>
+          <div class="card-body">
+            <p class="text-white">
+              {{ item.description }} @ <span>{{ item.company }}</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <br /><br /><br />
+  <!-- Skills section -->
+  <div class="container-fluid">
+    <section id="skills">
+      <h2 class="display-2">Skills</h2>
+      <div class="skills">
+        <h2>Front-end:</h2>
+        <div class="container2">
+          <div class="row">
+            <div class="col-md-12">
+              <div
+                v-for="skill in frontEnd"
+                :key="skill.name"
+                class="progress-container"
+              >
+                <h3 class="progress-title">{{ skill.name }}</h3>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    :style="{
+                      width: skill.percentage + '%',
+                      background: skill.color,
+                    }"
+                  >
+                    <div class="progress-value">{{ skill.percentage }}%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br /><br /><br />
+        <h2>Back-end:</h2>
+        <div class="container2">
+          <div class="row">
+            <div class="col-md-12">
+              <div
+                v-for="skill in backEnd"
+                :key="skill.name"
+                class="progress-container"
+              >
+                <h3 class="progress-title">{{ skill.name }}</h3>
+                <div class="progress">
+                  <div
+                    class="progress-bar"
+                    :style="{
+                      width: skill.percentage + '%',
+                      background: skill.color,
+                    }"
+                  >
+                    <div class="progress-value">{{ skill.percentage }}%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 </template>
   
   <script>
@@ -30,18 +106,26 @@ export default {
     resume() {
       return this.$store.state.education;
     },
-    // skill() {
-      // return this.$store.state.skill}
-    // }
+    workplace() {
+      return this.$store.state.workplace;
+    },
+    backEnd() {
+      return this.$store.state.backEnd;
+    },
+    frontEnd() {
+      return this.$store.state.frontEnd;
+    },
   },
   mounted() {
     this.$store.dispatch("fetchEducation");
-
+    this.$store.dispatch("fetchWorkplace");
+    this.$store.dispatch("fetchBackEnd");
+    this.$store.dispatch("fetchFrontEnd");
   },
 };
 </script>
   
-  <style>
+<style>
 /* Body */
 body {
   text-align: center;
@@ -61,9 +145,7 @@ body {
   --mainBox-shadow: -8px -3px 23px 5px rgba(105, 96, 96, 0.75);
 }
 
-
 /* Skills */
-
 .progress-title {
   font-size: 16px;
   font-weight: 700;
@@ -71,17 +153,32 @@ body {
   margin: 0 0 20px;
 }
 
-.progress {
-  height: 20px;
-  background: #333;
-  border-radius: 0;
-  box-shadow: none;
+.progress-container {
   margin-bottom: 30px;
-  overflow: visible;
 }
 
-.list-unstyled {
-  margin-right: 40px;
+.progress {
+  height: 20px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.progress-value {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 /* Education */
@@ -91,6 +188,7 @@ body {
   padding: 10px;
   color: black;
 }
+
 .card {
   border: 4px solid var(--green);
   margin: 10px 0;
@@ -100,9 +198,11 @@ body {
   background-color: var(--alternative);
   color: black;
 }
+
 .card:nth-child(odd) {
   position: relative;
 }
+
 .card:nth-child(odd)::after {
   position: absolute;
   top: -3em;
@@ -112,11 +212,13 @@ body {
   height: 45vh;
   border-right: 2px solid var(--primary);
 }
+
 .card:nth-child(even) {
   box-shadow: 0.5vw 0.2vw 0.7vw var(--awesomeColor);
   margin-left: auto;
   position: relative;
 }
+
 .card:nth-child(even)::after {
   position: absolute;
   content: "";
@@ -140,24 +242,30 @@ body {
     gap: 20px;
     align-items: center;
   }
+
   .card {
     width: 100%;
     flex-wrap: wrap;
   }
+
   .card a,
   .card p,
   footer p {
     font-size: small;
   }
+
   .card:nth-child(odd) {
     margin-left: 0;
   }
+
   .card:nth-child(odd)::after {
     content: none;
   }
+
   .card:nth-child(even) {
     margin-left: 0;
   }
+
   .card:nth-child(even)::after {
     content: none;
   }

@@ -120,7 +120,7 @@ label {
 
 /* INPUT VALIDATION */
 
-input:invalid {
+input:invalid:focus {
   background-color: #ffdddd;
 }
 
@@ -128,12 +128,12 @@ input:valid {
   background-color: #ddffdd;
 }
 
-input:required {
+input:required:invalid:focus {
   border-color: #800000;
   border-width: 3px;
 }
 
-input:required:invalid {
+input:required:invalid:focus {
   border-color: #c00000;
 }
 
