@@ -2,12 +2,17 @@
   <br><br><br>
   <div class="container-fluid">
     <section id="education">
+      <div class="row">
+        <h1 class="display-2">
+          EDUCATION
+        </h1>
+      </div>
       <div class="education">
         <div v-for="item in resume" :key="item.id" class="card">
           <h4 class="display-4">{{ item.year }}</h4>
           <div class="card-body">
             <p class="text-white">
-              {{ item.description }} @ <span>{{ item.place }}</span>
+              {{ item.description }}<span><br>{{ item.place }}</span><br>
               <a
                 v-if="item.certificate !== 'In progress'"
                 :href="item.certificate"
@@ -26,6 +31,11 @@
   <!-- WORKPLACE section-->
   <div class="container-fluid">
     <section id="workplace">
+      <div class="row">
+        <h1 class="display-2" >
+          WORKPLACE
+        </h1>
+      </div><br>
       <div class="workplace">
         <div v-for="item in workplace" :key="item.id" class="card">
           <h4 class="display-4">{{ item.name }}</h4>

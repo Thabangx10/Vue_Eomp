@@ -88,94 +88,81 @@ export default {
 /* Contact */
 
 .container {
-  padding: 20px;
-  background-color: #f2f2f2;
-  border-radius: 5px;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .display-2 {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  color: #333333;
 }
 
 .form-row {
-  display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .col-25 {
-  flex: 25%;
+  flex: 0 0 25%;
 }
 
 .col-75 {
-  flex: 75%;
+  flex: 0 0 75%;
 }
 
 label {
   font-weight: bold;
-  margin: 1px;
-  padding: 1px;
-}
-
-/* INPUT VALIDATION */
-
-input:invalid:focus {
-  background-color: #ffdddd;
-}
-
-input:valid {
-  background-color: #ddffdd;
-}
-
-input:required:invalid:focus {
-  border-color: #800000;
-  border-width: 3px;
-}
-
-input:required:invalid:focus {
-  border-color: #c00000;
+  margin-bottom: 5px;
 }
 
 input[type="text"],
 textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-radius: 4px;
   box-sizing: border-box;
   resize: vertical;
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  color: #333333;
 }
 
 input[type="submit"] {
-  background-color: #161818;
-  color: white;
+  background-color: #000000;
+  color: #ffffff;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
-  background-color: #028f5e;
+  background-color: #52b95f;
 }
 
-#field {
-  margin: 1px;
-  padding: 1px;
+input:invalid:focus {
+  border-color: #ff3333;
 }
 
-/* Custom Validation */
-
-/* FORM VALIDATION */
-
-form:invalid {
-  border: 5px solid #ffdddd;
+input:valid {
+  border-color: #33cc33;
 }
 
-form:valid {
-  border: 5px solid #ddffdd;
+input:required:invalid:focus {
+  border-color: #cc0000;
 }
+
+input:required:invalid:focus {
+  border-color: #cc0000;
+}
+
+/* Mobile Responsive */
 
 @media screen and (max-width: 600px) {
   .col-25,
@@ -184,4 +171,5 @@ form:valid {
     width: 100%;
   }
 }
+
 </style>

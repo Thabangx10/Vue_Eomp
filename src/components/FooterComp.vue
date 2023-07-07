@@ -50,6 +50,9 @@
       </div>
     </div>
     <!-- Grid column -->
+    <p>
+      <strong>Thabangx10@gmail.com</strong>
+    </p>
 
   </div>
   <!-- Grid row-->
@@ -59,7 +62,7 @@
 
 <!-- Copyright -->
 <div class="footer-copyright text-center py-3">© 2023   Copyright:
-  <a href="/"> Thabang k</a>
+  <a href="https://drive.google.com/file/d/1u2FXYn7V690xV1EIvNkLmAParrHzVd-x/view?usp=drive_link">CV</a>
 </div>
 <!-- Copyright -->
 

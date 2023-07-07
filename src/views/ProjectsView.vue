@@ -1,9 +1,6 @@
 <template>
   <!-- Projects -->
-  <section class="container" id="projects">
-    <div class="row">
-      <h2 class="display-2">Projects</h2>
-    </div>
+  <section class="container" id="projects"><br>
     <div class="row">
       <div class="col-lg-4" v-for="project in projects" :key="project.id">
         <div class="projects">

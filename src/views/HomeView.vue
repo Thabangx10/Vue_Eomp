@@ -45,4 +45,51 @@ div {
   bottom: 0;
   color: black;
 }
+
+/* General Styling */
+.container-fluid {
+  background-color: #f2f2f2;
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.display-2 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333333;
+}
+
+.display-4 {
+  font-size: 28px;
+  color: #333333;
+}
+
+.display-4 span {
+  color: #4caf50;
+}
+
+.img-thumbnail {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 600px) {
+  .display-2 {
+    font-size: 36px;
+  }
+
+  .display-4 {
+    font-size: 24px;
+  }
+}
 </style>
