@@ -1,18 +1,17 @@
 <template>
-  <br><br><br>
+  <br /><br /><br />
   <div class="container-fluid">
     <section id="education">
       <div class="row">
-        <h1 class="display-2">
-          EDUCATION
-        </h1>
+        <h1 class="display-2">EDUCATION</h1>
       </div>
       <div class="education">
         <div v-for="item in resume" :key="item.id" class="card">
           <h4 class="display-4">{{ item.year }}</h4>
           <div class="card-body">
             <p class="text-white">
-              {{ item.description }}<span><br>{{ item.place }}</span><br>
+              {{ item.description }}<span><br />{{ item.place }}</span
+              ><br />
               <a
                 v-if="item.certificate !== 'In progress'"
                 :href="item.certificate"
@@ -26,16 +25,20 @@
       </div>
     </section>
   </div>
-  <br /><br />
+  <a
+    class="display-6"
+    href="https://drive.google.com/file/d/1u2FXYn7V690xV1EIvNkLmAParrHzVd-x/view?usp=drive_link"
+    target="_blank">CV
+  </a>
+  <br/><br/>
 
   <!-- WORKPLACE section-->
   <div class="container-fluid">
     <section id="workplace">
       <div class="row">
-        <h1 class="display-2" >
-          WORKPLACE
-        </h1>
-      </div><br>
+        <h1 class="display-2">WORKPLACE</h1>
+      </div>
+      <br />
       <div class="workplace">
         <div v-for="item in workplace" :key="item.id" class="card">
           <h4 class="display-4">{{ item.name }}</h4>
