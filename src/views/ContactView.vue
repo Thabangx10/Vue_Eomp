@@ -23,6 +23,8 @@
                     name="firstname"
                     placeholder="Name"
                     pattern="[A-Za-z]+"
+                    minlength="3"
+                    maxlength="20"
                     title="Please enter a valid first name."
                     required
                   />
@@ -39,6 +41,8 @@
                     name="lastname"
                     placeholder="Last Name"
                     pattern="[A-Za-z]+"
+                    minlength="3"
+                    maxlength="20"
                     title="Please enter a valid last name."
                     required
                   />
@@ -171,5 +175,4 @@ input:required:invalid:focus {
     width: 100%;
   }
 }
-
 </style>

@@ -26,7 +26,7 @@
   />
   <div class="container animated-content">
     <p class="scale-in">
-      I believe at my currenet stage in life i would bring invaluable youtful
+      I believe at my current stage in life, i would bring invaluable youthful
       energy. I have began increasing my mindfulness capacity, my passion for
       having a vision for a growing career.
     </p>
