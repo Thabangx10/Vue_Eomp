@@ -26,11 +26,12 @@
     </section>
   </div>
   <a
-    class="display-6"
+    class="display-6 cv-link"
     href="https://drive.google.com/file/d/1u2FXYn7V690xV1EIvNkLmAParrHzVd-x/view?usp=drive_link"
-    target="_blank">CV
+    target="_blank"
+    >CV
   </a>
-  <br/><br/>
+  <br /><br />
 
   <!-- WORKPLACE section-->
   <div class="container-fluid">
@@ -156,6 +157,23 @@ body {
   --awesomeColor: black;
   --green: black;
   --mainBox-shadow: -8px -3px 23px 5px rgba(105, 96, 96, 0.75);
+}
+
+/* CV */
+.cv-link {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #191818;
+  border-radius: 4px;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cv-link:hover {
+  background-color: #45a049;
 }
 
 /* Skills */
