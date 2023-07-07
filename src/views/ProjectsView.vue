@@ -69,6 +69,7 @@ article {
   transform-origin: center;
   transition: all 0.4s ease-in-out;
   overflow: visible;
+  justify-content: center;
 }
 
 article a::after {
@@ -77,6 +78,9 @@ article a::after {
   inset-inline: 0;
   cursor: pointer;
   content: "";
+  object-fit: cover;
+  object-position: top;
+  justify-content: center;
 }
 
 /* basic article elements styling */
@@ -101,6 +105,9 @@ article img {
   transform-origin: center;
   transform: scale(var(--img-scale));
   transition: transform 0.4s ease-in-out;
+  object-fit: cover;
+  object-position: top;
+  justify-content: center;
 }
 
 .article-body {
@@ -145,6 +152,9 @@ article:has(:hover, :focus) {
   padding-inline: 24px;
   grid-template-columns: 1fr;
   gap: 24px;
+  object-fit: cover;
+  object-position: top;
+  justify-content: center;
 }
 
 @media screen and (min-width: 480px) {
@@ -171,6 +181,8 @@ article:has(:hover, :focus) {
     height: 100%;
     aspect-ratio: 1;
     object-fit: cover;
+    object-position: top;
+    justify-content: center;
   }
 }
 
