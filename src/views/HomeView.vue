@@ -5,7 +5,7 @@
         <h2 class="display-2">
           Thabang Kganana
           <img
-            src="https://i.postimg.cc/mgRnzFL0/logo-1.jpg"
+            src="https://i.postimg.cc/wTb8nVYJ/C12-C2-Thabang-Kganana-1.jpg"
             alt="logo"
             class="img-thumbnail rounded-5"
             loading="lazy"
